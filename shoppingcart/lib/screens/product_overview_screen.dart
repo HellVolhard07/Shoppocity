@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shoppingcart/providers/cart.dart';
 import 'package:shoppingcart/screens/cart_screen.dart';
+import 'package:shoppingcart/widgets/app_drawer.dart';
 import 'package:shoppingcart/widgets/badge.dart';
 import 'package:shoppingcart/widgets/products_grid.dart';
 
@@ -22,6 +23,7 @@ class _ProductOverviewScreenState extends State<ProductOverviewScreen> {
   Widget build(BuildContext context) {
     final cart = Provider.of<Cart>(context);
     return Scaffold(
+      drawer: AppDrawer(),
       appBar: AppBar(
         title: Text(
           "Shopping cart",
